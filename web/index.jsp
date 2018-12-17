@@ -9,10 +9,20 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="d" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="e" %>
 <%@page import="Modelo.BubbleDataModel" %>
-<%
-    int n1 = (Integer) request.getSession().getAttribute("mediaHospFe");
-    int n2 = (Integer) request.getSession().getAttribute("mediaHospEn");
-    int n3 = (Integer) request.getSession().getAttribute("mediaHospMa");
+<% 
+    int enero = (Integer) request.getSession().getAttribute("mediaHospEn");
+    int febr = (Integer) request.getSession().getAttribute("mediaHospFe");
+    int mar = (Integer) request.getSession().getAttribute("mediaHospMa");
+    int abr = (Integer) request.getSession().getAttribute("mediaHospAb");
+    int may = (Integer) request.getSession().getAttribute("mediaHospMay");
+    int ju = (Integer) request.getSession().getAttribute("mediaHospJu");
+    int jl = (Integer) request.getSession().getAttribute("mediaHospJl");
+    int ago = (Integer) request.getSession().getAttribute("mediaHospAg");
+    int sep = (Integer) request.getSession().getAttribute("mediaHospSe");
+    int oc = (Integer) request.getSession().getAttribute("mediaHospOc");
+    int nov = (Integer) request.getSession().getAttribute("mediaHospNo");
+    int dic = (Integer) request.getSession().getAttribute("mediaHospDi");
+
 %>
 
 <!DOCTYPE html>
@@ -36,9 +46,20 @@
             <input type="submit" value="envio">
         </form>
         <script>
-            var n1 = <%=n1%>
-            var n2 = <%=n2%>
-            var n3 = <%=n3%>
+            var ener = <%=enero%>  
+            var febr = <%=febr%> 
+            var mar = <%=mar%> 
+            var abril = <%=abr%> 
+            var mayo = <%=may%> 
+            var junio = <%=ju%> 
+            var julio = <%=jl%>
+            var ago = <%=ago%>
+            var sep = <%= sep%>
+            var oc = <%= oc%>
+            var nov = <%= nov%>
+            var dic = <%= dic%>
+            
+            
             window.onload = function () {
 
                 var chart = new CanvasJS.Chart("chartContainer", {
@@ -65,18 +86,18 @@
                             dataPoints: [
                                 //{ x: 68.3, y: 2.4, z: 1309.05 , name: "India"},
                                 //{ x: 76, y: 1.57, z:1371.22, name: "China"},
-                                {x: 1, y: 4.26, z: n2  , name: "Enero"},
-                                {x: 2, y: 4.51, z: 36.115, name: "Febrero"},
-                                {x: 3, y: 1.84, z: 320.896, name: "Marzo"},
-                                {x: 4, y: 2.44, z: 258.162, name: "Abril"},
-                                {x: 5, y: 1.78, z: 225.962, name: "Mayo"},
-                                {x: 6, y: 2.21, z: 125.890, name: "Junio"},
-                                {x: 7, y: 5.59, z: 181.181, name: "Julio"},
-                                {x: 8, y: 1.75, z: 144.096, name: "Agosto"},
-                                {x: 9, y: 1.46, z: 127.141, name: "Septiembre"},
-                                {x: 10, y: 1.83, z: 23.789, name: "Octubre"},
-                                {x: 11, y: 3.31, z: 93.778, name: "Noviembre"},
-                                {x: 12, y: 1.81, z: 65.128, name: "Diciembre"},
+                                {x: 1, y: 10, z: 15  , name: "Enero"},
+                                {x: 2, y: 8, z: 13, name: "Febrero"},
+                                {x: 3, y: 11, z: 14, name: "Marzo"},
+                                {x: 4, y: 11, z: 13, name: "Abril"},
+                                {x: 5, y: 14, z: 17, name: "Mayo"},
+                                {x: 6, y: 15, z: 24, name: "Junio"},
+                                {x: 7, y: 18, z: 25, name: "Julio"},
+                                {x: 8, y: 17, z: 25, name: "Agosto"},
+                                {x: 9, y: 14, z: 18, name: "Septiembre"},
+                                {x: 10, y: 13, z: 16, name: "Octubre"},
+                                {x: 11, y: 10, z: 14, name: "Noviembre"},
+                                {x: 12, y: 9, z: 10, name: "Diciembre"},
                             ]
                         }]
                 });

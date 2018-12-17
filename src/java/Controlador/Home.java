@@ -108,7 +108,7 @@ public class Home extends HttpServlet {
                     try{
                     if(!lista.getFecha().before(dateFormat.parse("2018-01-01")) || !lista.getFecha().after(dateFormat.parse("2018-01-31"))){
                         mediaHospEn += lista.getHospitalizados();
-                        cont++;
+                        
                     }
                     if (!lista.getFecha().before(dateFormat.parse("2018-02-01")) || !lista.getFecha().after(dateFormat.parse("2018-02-28"))) {
                         mediaHospFe += lista.getHospitalizados();
@@ -142,6 +142,7 @@ public class Home extends HttpServlet {
                     }
                     if (!lista.getFecha().before(dateFormat.parse("2018-12-01")) || !lista.getFecha().after(dateFormat.parse("2018-12-31"))) {
                         mediaHospDi += lista.getHospitalizados();
+                        cont++;
                     }
                     }catch(Exception e){
                     }
@@ -182,6 +183,7 @@ public class Home extends HttpServlet {
                 
                 request.getSession().setAttribute("particulas", mat);
                 request.getRequestDispatcher("/index.jsp").forward(request, response);
+                break;
         }
     }
 
