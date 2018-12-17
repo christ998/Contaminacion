@@ -15,14 +15,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Gabriel
+ * @author Christian
  */
+@WebServlet(name = "Home2", urlPatterns = {"/Home2"})
 public class Home extends HttpServlet {
 
     /**
@@ -39,17 +41,20 @@ public class Home extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         DAOModel d = new DAOModel();
         ArrayList<BubbleDataModel> bubble = null;
-       
+
         try {
             bubble = d.loadData("dataPreliminar.csv");
         } catch (ParseException ex) {
             Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
+        String [] dato1 = {"tor","fds"};
         request.setAttribute("datos", bubble);
         RequestDispatcher disp = request.getRequestDispatcher("/index.jsp");
         disp.forward(request, response);
     }
+
+    
+
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

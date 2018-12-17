@@ -9,7 +9,7 @@ import java.util.Date;
 
 public class DAOModel {
     public ArrayList<BubbleDataModel> loadData(String archivo) throws ParseException{
-        FileHandler f = new FileHandler("C:\\Users\\Christian\\Downloads\\Repo_ProyectoEstructura-master\\ModeloMVC\\");
+        FileHandler f = new FileHandler("C:\\Users\\Christian\\Documents\\NetBeansProjects\\Contaminacion\\");
         System.out.println(System.getProperty("user.dir"));
         ArrayList<BubbleDataModel> bubble = new ArrayList<>();
         ArrayList<String> datos = f.lectura(archivo);
