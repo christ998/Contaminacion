@@ -9,12 +9,10 @@ import Datos.DAOModel;
 import Modelo.BubbleDataModel;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -28,8 +26,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Christian
  */
-@WebServlet(name = "Home2", urlPatterns = {"/Home2"})
-public class Home extends HttpServlet {
+@WebServlet(name = "Cont", urlPatterns = {"/Cont.do"})
+public class Cont extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -43,22 +41,18 @@ public class Home extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        DAOModel d = new DAOModel();
-        ArrayList<BubbleDataModel> bubble = null;
-
-        try {
-            bubble = d.loadData("dataPreliminar.csv");
-        } catch (ParseException ex) {
-            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        request.setAttribute("datos", bubble);
-        RequestDispatcher disp = request.getRequestDispatcher("/index.jsp");
-        disp.forward(request, response);
-        
+//        DAOModel d = new DAOModel();
+//        ArrayList<BubbleDataModel> bubble = null;
+//
+//        try {
+//            bubble = d.loadData("dataPreliminar.csv");
+//        } catch (ParseException ex) {
+//            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        request.setAttribute("datos", bubble);
+//        RequestDispatcher disp = request.getRequestDispatcher("/index.jsp");
+//        disp.forward(request, response);
     }
-
-    
-
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -86,6 +80,7 @@ public class Home extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        processRequest(request, response);
         DAOModel d = new DAOModel();
         ArrayList<BubbleDataModel> bubble = null;
 
