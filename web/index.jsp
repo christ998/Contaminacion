@@ -40,7 +40,7 @@
         <h1>Contaminación en Temuco</h1>
         <h3>Uno de los problemas que impactan a la sociedad, es la contaminación del aire.
             En particular Temuco, esta se caracteriza por tener uno de los niveles más altos en comparación con otras ciudades de Chile.
-            Una consecuencia de esto, es el impacto negativo en la salud respiratoria de las personas que viven en la comuna<script>n1</script></h3></br>
+            Una consecuencia de esto, es el impacto negativo en la salud respiratoria de las personas que viven en la comuna<script>ener</script></h3></br>
         <form action ="Home2" method="post">
             Año = <input type="text" name="agno"></br>
             <input type="submit" value="envio">
@@ -68,7 +68,7 @@
                         text: "Resultados"
                     },
                     axisX: {
-                        title: "Fecha"
+                        title: "Mes"
                     },
                     axisY: {
                         title: "nro de particulas"
@@ -86,18 +86,18 @@
                             dataPoints: [
                                 //{ x: 68.3, y: 2.4, z: 1309.05 , name: "India"},
                                 //{ x: 76, y: 1.57, z:1371.22, name: "China"},
-                                {x: 1, y: 10, z: 15  , name: "Enero"},
-                                {x: 2, y: 8, z: 13, name: "Febrero"},
-                                {x: 3, y: 11, z: 14, name: "Marzo"},
-                                {x: 4, y: 11, z: 13, name: "Abril"},
-                                {x: 5, y: 14, z: 17, name: "Mayo"},
-                                {x: 6, y: 15, z: 24, name: "Junio"},
-                                {x: 7, y: 18, z: 25, name: "Julio"},
-                                {x: 8, y: 17, z: 25, name: "Agosto"},
-                                {x: 9, y: 14, z: 18, name: "Septiembre"},
-                                {x: 10, y: 13, z: 16, name: "Octubre"},
-                                {x: 11, y: 10, z: 14, name: "Noviembre"},
-                                {x: 12, y: 9, z: 10, name: "Diciembre"},
+                                {x: 1, y: 19, z: 9  , name: "Enero"},
+                                {x: 2, y: 15, z: 8, name: "Febrero"},
+                                {x: 3, y: 26, z: 12, name: "Marzo"},
+                                {x: 4, y: 34, z: 14, name: "Abril"},
+                                {x: 5, y: 43, z: 17, name: "Mayo"},
+                                {x: 6, y: 45, z: 20, name: "Junio"},
+                                {x: 7, y: 46, z: 24, name: "Julio"},
+                                {x: 8, y: 35, z: 19, name: "Agosto"},
+                                {x: 9, y: 30, z: 15, name: "Septiembre"},
+                                {x: 10, y: 25, z: 12, name: "Octubre"},
+                                {x: 11, y: 20, z: 10, name: "Noviembre"},
+                                {x: 12, y: 17, z: 6, name: "Diciembre"},
                             ]
                         }]
                 });
