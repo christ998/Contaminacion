@@ -47,7 +47,6 @@ public class Home extends HttpServlet {
         } catch (ParseException ex) {
             Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
         }
-        String [] dato1 = {"tor","fds"};
         request.setAttribute("datos", bubble);
         RequestDispatcher disp = request.getRequestDispatcher("/index.jsp");
         disp.forward(request, response);
